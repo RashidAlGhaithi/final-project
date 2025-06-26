@@ -1,0 +1,317 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #fefefe;
+  margin: 0;
+  color: #2f2f2f;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2em;
+  background-color: #e4eef5;
+  padding: 20px 10px;
+  border-radius: 8px;
+}
+
+header h1 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 3em;
+  margin: 0;
+}
+
+.subheading-highlight {
+  font-size: 1.3em;
+  color: #3c5a78;
+  margin-top: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1.5em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2f4858;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #d6e0f0;
+}
+
+.hero-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 2em;
+}
+
+.hero-image.larger {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 60% 40% 60% 40% / 50% 30% 70% 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.intro {
+  max-width: 600px;
+  flex-grow: 1;
+}
+
+.intro-bg {
+  background-color: #f7faff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.intro h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.intro p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin-bottom: 1em;
+}
+
+.download-btn-container {
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #2f4858;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3c5a78;
+  color: #ffffff;
+}
+
+footer.center-footer,
+footer {
+  text-align: center;
+  margin-top: 3em;
+  color: #7c7c7c;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #2f4858;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+
+.typewriter h1 {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid #2f4858;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #2f4858; }
+}
+
+.typewriter h1::after {
+  content: '';
+  animation: none !important;
+}
+
+.quote-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.quote-slider blockquote {
+  display: none;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.7em;
+  background-color: #f4f8fb;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.quote-slider blockquote.active {
+  display: block;
+}
+
+.quote-nav {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quote-nav button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #2f4858;
+  cursor: pointer;
+}
+
+.quote-nav button:hover {
+  color: #577694;
+}
+
+.experience-section,
+.project-section,
+.leadership-section,
+.skill-section,
+.contact-container {
+  background-color: #eef6fa;
+  padding: 30px;
+  border-left: 5px solid #2f4858;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  line-height: 1.8em;
+}
+
+.experience-section h2,
+.project-section h2,
+.leadership-section h2,
+.skill-section h2,
+.contact-container h2 {
+  color: #2f4858;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+.date-range {
+  font-size: 1.15em;
+  color: #a35e00;
+  font-weight: 600;
+  margin-left: 10px;
+  display: block;
+  margin-top: 0.2em;
+}
+
+.experience-section h3,
+.project-section h3,
+.leadership-section h3,
+.skill-section h3 {
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+
+.experience-section p,
+.experience-section li,
+.project-section p,
+.project-section li,
+.leadership-section p,
+.leadership-section li,
+.skill-section p,
+.skill-section li,
+.contact-container p,
+.contact-container label,
+.contact-container input,
+.contact-container textarea {
+  font-size: 1.05em;
+  margin-top: 0.5em;
+}
+
+.experience-section ul,
+.project-section ul,
+.leadership-section ul,
+.skill-section ul {
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+  list-style-type: disc;
+}
+
+.contact-form {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-form .name-row {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 1.05em;
+  margin-bottom: 0.3em;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  padding-left: 0;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-size: 1.05em;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin: 0;
+  transform: scale(1.2);
+}
+
+.checkbox-item label {
+  margin: 0;
+  font-weight: bold;
+}
+
+

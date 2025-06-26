@@ -1,32 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-<link rel="stylesheet" href="reset.css">  </link>
-<link rel="stylesheet" href="main.css"></link>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Righteous&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous"/>
+  <title>Rashid Al-Ghaithi | Portfolio</title>
 </head>
 <body>
-  <div class="wrapper"> 
-    <header>  
-      <h1></h1>
+  <div class="wrapper">
+    <header class="typewriter header-bg">
+      <h1>Hello! I'm Rashid Al-Ghaithi</h1>
+      <h2 class="subheading-highlight">Operations Management & Risk Management</h2>
+    
       <nav>
         <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-  
-    <main>  
 
+    <main>
+      <section class="hero-section">
+        <img src="photo1.png" alt="Rashid Al-Ghaithi smiling" class="hero-image larger" />
+        
+        <div class="intro intro-bg">
+          <h3>Welcome</h3>
+          <p>I am a motivated fourth-year undergraduate student at the Carl H. Lindner College of Business at the University of Cincinnati, double majoring in Operations Management and Insurance & Risk Management.</p>
+          <p>I love traveling, exploring cultures, and connecting with people from all walks of life. I take pride in being a strong communicator, fast learner, and dependable team member in any setting.</p>
+          <p>Through my co-op experiences and student involvement, I’ve honed my skills in strategic thinking, data analysis, and process improvement—shaping me into an adaptable and driven future professional.</p>
+        </div>
+
+        
+        <div class="download-btn-container">
+          <a href="Rashid_Resume.pdf" class="btn" target="_blank">Download Resume</a>
+        </div>
+      </section>
+
+      <section class="quote-slider">
+        <blockquote class="active">“The best investment you can make is in yourself.” – Warren Buffett</blockquote>
+        <blockquote>“Success is not final; failure is not fatal: it is the courage to continue that counts.” – Winston Churchill</blockquote>
+        <blockquote>“In the middle of difficulty lies opportunity.” – Albert Einstein</blockquote>
+        <blockquote>“Leadership is not about being in charge. It is about taking care of those in your charge.” – Simon Sinek</blockquote>
+        <div class="quote-nav">
+          <button id="prev-quote">&#8592;</button>
+          <button id="next-quote">&#8594;</button>
+        </div>
+      </section>
     </main>
 
-    <footer>  
-
+    <footer class="center-footer">
+      <p>&copy; 2025 Rashid Al-Ghaithi</p>
+      <a href="https://www.linkedin.com/in/rashid-al-ghaithi" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:alghairm@mail.uc.edu"><i class="fas fa-envelope"></i></a>
     </footer>
   </div>
+
+  <script>
+    const quotes = document.querySelectorAll('.quote-slider blockquote');
+    const prevBtn = document.getElementById('prev-quote');
+    const nextBtn = document.getElementById('next-quote');
+    let index = 0;
+
+    function showQuote(i) {
+      quotes.forEach(q => q.classList.remove('active'));
+      quotes[i].classList.add('active');
+    }
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + quotes.length) % quotes.length;
+      showQuote(index);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % quotes.length;
+      showQuote(index);
+    });
+  </script>
 </body>
 </html>
+
+
+
+
+
